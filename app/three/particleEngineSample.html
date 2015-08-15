@@ -18,13 +18,14 @@
     <!-- endbuild -->
   </head>
   <style>
-   
+   #container { width:1000px;
+   height: 800px;}
   </style>
   <body>
 
     <div class="row">
       <div class="large-12">
-        <h1>Basics</h1>
+        <h1>Basics: Particle Engine Sample</h1>
         <div id="container"></div>
        
         </div>
@@ -35,6 +36,9 @@
        
 
     <!-- build:js js/vendor/libraries.min.js -->
+        
+    <!--GUI for experimenting with values -->
+    <script src="script/dat.gui.min.js"></script>
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/fastclick/lib/fastclick.js"></script>
@@ -63,6 +67,15 @@
     <!-- build:js js/app.min.js -->
     <script src="../js/app.js"></script>
     <!-- endbuild -->
-     <script src="script/basics.js"></script>
+    <script src="script/Detector.js"></script>
+    <script src="script/Stats.js"></script>
+    <script src="script/OrbitControls.js"></script>
+    
+    <script src="script/particleEngine.js"></script>
+    <script src="script/particleEngineExamples.js"></script>
+    <script src="script/particle-Engine-Sample.js"></script>
+
+
+
   </body>
 </html>

@@ -2,7 +2,6 @@
   "name": "zf5_project",
   "description": "",
   "version": "0.0.1",
-  "description": "",
   "homepage": "",
   "author": {
     "name": "",
@@ -29,5 +28,8 @@
     "grunt-usemin": "~3.0.0",
     "grunt-contrib-imagemin": "0.9.4",
     "grunt-newer": "~1.1.1"
+  },
+  "dependencies": {
+    "grapher": "0.0.1"
   }
 }
