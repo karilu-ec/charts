@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="canvasjs-1.7.0/canvasjs.min.js"></script>
+  <script type="text/javascript">
+    var chart;
+    window.onload = function () {
+       chart = new CanvasJS.Chart("chartContainer",
+	{
+		zoomEnabled: true,      
+		title:{
+			text: "NOAA Station MRH01" 
+		},
+        axisX:{      
+           // valueFormatString: "MMM DD HH:mm"
+        },
+		axisY :{
+           title: "ATMP (Celcius)",
+			includeZero: false
+		},
+		legend: {
+			horizontalAlign: "right",
+			verticalAlign: "center"        
+		},
+		data: data,  // random generator 
+	});
+    }
+   var data = [];
+   var dataSeries = { type: "scatter",  markerColor: "#778899",  markerSize: 3, xValueType: "dateTime" };
+   var dataPoints = [];
+  $(function(){
+ 
+    $.getJSON( "MRH01.json", function( json ) {
+          len = json.length;
+          console.log('Number of points: ' + len);
+          $.each(json, function(idx, value) {
+             dataPoints.push( {
+              x: value.Date*1000,
+              y: value.ATMP
+            });
+          });
+          dataSeries.dataPoints = dataPoints;
+          data.push(dataSeries);
+          chart.render();
+		});
+    
+  });
+  
+  </script>
+ 
+  
+  
+</head>
+<body>
+    <div id="chartContainer" style="height: 500px; width: 1000px;"></div>
+  
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+	"event":{
+		"id": 1,
+		"name": "Event Name",
+		"description": "Event Description",
+		"repreturns":[
+			{
+				"fed": "FED-0001",
+				"object": "obj1",
+				"sensor": "sensor1",
+				"time": 1418137205722, // ms since 1/1/1970
+				"intensity": 1000,
+				"lat": 39.351954,
+				"long": -84.461203
+			},
+			{
+				"fed": "FED-0001",
+				"object": "obj1",
+				"sensor": "sensor2",
+				"time": 1418137209023, 
+				"intensity": 1200,
+				"lat": 39.355954,
+				"long": -84.462203
+			},
+			{
+				"fed": "FED-0001",
+				"object": "obj2",
+				"sensor": "sensor1",
+				"time": 1418137215722, 
+				"intensity": 1500,
+				"lat": 39.361954,
+				"long": -84.471203
+			},
+			{
+				"fed": "FED-0002",
+				"object": "obj2",
+				"sensor": "sensor2",
+				"time": 1418137305722, 
+				"intensity": 2000,
+				"lat": 39.362954,
+				"long": -84.477203
+			}
+		]
+	}
+}
